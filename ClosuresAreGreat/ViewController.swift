@@ -14,7 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-  
+    func performOperation(with:Double... , operation:(Double, Double)->Double)->Double {
+        var result = 0.0
+        result = with.reduce(result, operation)
+        
+        return result
+    }
     
 
     
